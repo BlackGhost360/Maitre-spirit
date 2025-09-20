@@ -87,14 +87,14 @@ window.addEventListener('scroll', function() {
 // -----------------------------
 // Effet hover timeline
 // -----------------------------
-document.querySelectorAll('.timeline-content').forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.borderLeft = '5px solid var(--gold-accent)';
-    });
-    item.addEventListener('mouseleave', function() {
-        this.style.borderLeft = 'none';
-    });
-});
+// document.querySelectorAll('.timeline-content').forEach(item => {
+//     item.addEventListener('mouseenter', function() {
+//         this.style.borderLeft = '5px solid var(--gold-accent)';
+//     });
+//     item.addEventListener('mouseleave', function() {
+//         this.style.borderLeft = 'none';
+//     });
+// });
 
 // -----------------------------
 // Bouton Back to Top
