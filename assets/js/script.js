@@ -87,36 +87,15 @@ window.addEventListener('scroll', function() {
 // -----------------------------
 // Effet hover timeline
 // -----------------------------
-// document.querySelectorAll('.timeline-content').forEach(item => {
-//     item.addEventListener('mouseenter', function() {
-//         this.style.borderLeft = '5px solid var(--gold-accent)';
-//     });
-//     item.addEventListener('mouseleave', function() {
-//         this.style.borderLeft = 'none';
-//     });
-// });
-
-// -----------------------------
-// Bouton Back to Top
-// -----------------------------
-const backToTop = document.getElementById('backToTop');
-if (backToTop) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTop.classList.remove('d-none');
-        } else {
-            backToTop.classList.add('d-none');
-        }
+document.querySelectorAll('.timeline-content').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        this.style.borderLeft = '5px solid var(--gold-accent)';
     });
-
-    backToTop.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    item.addEventListener('mouseleave', function() {
+        this.style.borderLeft = 'none';
     });
-}
+});
+
 
 
 // index page
