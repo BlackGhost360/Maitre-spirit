@@ -165,7 +165,7 @@ body {
 /* ======= SECTION TITLES ======= */
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--burgundy-deep);
     text-align: center;
@@ -597,10 +597,10 @@ body {
 
 /* Très petits écrans */
 @media (max-width: 480px) {
-    .container, .row {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+     .about-page {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
     .container {
         padding-left: 10px;
         padding-right: 10px;
