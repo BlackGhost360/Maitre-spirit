@@ -29,6 +29,50 @@ body {
     overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
+/* html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+} */
+
+/* img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+
+/* .container, .row, section, div {
+  max-width: 100%;
+  overflow-x: hidden;
+} */
+
+
+
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.3);
+} */
+
+
+
+.timeline-item {
+    contain: layout style paint;
+    will-change: transform;
+}
+
+.timeline-content {
+    will-change: transform, border-left;
+}
+
+/* Forcer le recalcul responsive */
+@media (max-width: 768px) {
+    .timeline-item {
+        transform: translateZ(0); /* Force hardware acceleration */
+    }
+}
+
+
+
+
 /* ======= NAVBAR ======= */
 .navbar {
     background: linear-gradient(135deg, var(--burgundy-deep) 0%, var(--burgundy-light) 100%);
@@ -58,7 +102,7 @@ body {
 
 .navbar-brand {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--gold-accent) !important;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -553,6 +597,10 @@ body {
 
 /* Très petits écrans */
 @media (max-width: 480px) {
+    .container, .row {
+  max-width: 100%;
+  overflow-x: hidden;
+}
     .container {
         padding-left: 10px;
         padding-right: 10px;

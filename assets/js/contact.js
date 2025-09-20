@@ -131,28 +131,6 @@
         e.target.value = value.replace(/(\d{2})(?=\d)/g, '$1 ').trim();
     });
 
-    // Scroll-to-top button
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            if (!document.querySelector('.scroll-top')) {
-                const scrollBtn = document.createElement('button');
-                scrollBtn.className = 'scroll-top position-fixed';
-                scrollBtn.style.cssText = `
-                    bottom: 30px; right: 30px; z-index: 1000;
-                    width: 50px; height: 50px; border-radius: 50%;
-                    background: var(--burgundy-deep); color: white;
-                    border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-                    cursor: pointer; transition: all 0.3s ease;
-                `;
-                scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-                scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-                document.body.appendChild(scrollBtn);
-            }
-        } else {
-            const scrollBtn = document.querySelector('.scroll-top');
-            if (scrollBtn) scrollBtn.remove();
-        }
-    });
 
     // Fade-in page load
     window.addEventListener('load', () => {
