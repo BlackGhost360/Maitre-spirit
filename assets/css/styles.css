@@ -108,6 +108,15 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
+.navbar-brand {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.navbar-toggler {
+    flex-shrink: 0;
+}
+
 .btn-consultation:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
@@ -464,7 +473,7 @@ body {
 .footer {
     background: linear-gradient(135deg, var(--brown-dark) 0%, var(--burgundy-deep) 100%);
     color: var(--ivory);
-    padding: 3rem 0 1rem;
+    padding: 3rem 0 0;
     margin-top: 0;
 }
 
