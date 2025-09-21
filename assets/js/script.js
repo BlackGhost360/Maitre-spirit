@@ -501,3 +501,38 @@ if (!document.querySelector('#accessibility-styles')) {
     styleElement.innerHTML = accessibilityStyles;
     document.head.appendChild(styleElement);
 }
+
+
+//produits.html
+
+    
+    
+        // Enhanced product card interactions
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // WhatsApp button analytics (optional)
+        document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // You can add analytics tracking here
+                console.log('WhatsApp command clicked for:', this.closest('.product-card').querySelector('.product-title').textContent);
+            });
+        });
+
+
+        // Add loading animation for better UX
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });

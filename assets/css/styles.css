@@ -102,7 +102,7 @@ body {
 
 .navbar-brand {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--gold-accent) !important;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -112,6 +112,11 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
     color: var(--burgundy-deep) !important;
+}
+
+.nav-item .active{
+    color: var(--gold-accent) !important;
+    font-weight: 700;
 }
 
 /* ======= HERO SECTION ======= */
@@ -124,10 +129,10 @@ body {
             rgba(101, 67, 33, 0.85) 100%
         ),
         url("../images/about-slide.jpeg") center/cover no-repeat;
-    padding: 150px 0 100px;
+    padding: 50px 0 50px;
     position: relative;
     overflow: hidden;
-    min-height: 70vh;
+    min-height: 60vh;
 }
 
 .hero-section::before {
@@ -509,7 +514,7 @@ body {
     }
     
     .hero-section {
-        padding: 120px 0 80px;
+        padding: 50px 0 20px;
     }
     
     .profile-section,
@@ -696,7 +701,7 @@ body {
 
         /* Hero Section Enhanced */
         .hero-section-index {
-            min-height: 90vh;
+            min-height: 70vh;
             background: 
                 linear-gradient(
                     135deg, 
@@ -765,7 +770,7 @@ body {
         }
 
         .hero-title-index {
-            font-size: 1.5rem;
+            font-size: 3rem !important; 
             background: linear-gradient(45deg, var(--burgundy-deep), var(--gold-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1067,7 +1072,7 @@ body {
         }
 
         /* FAQ Section */
-        .faq-section {
+        /* .faq-section {
             padding: 100px 0;
             background: var(--cream);
         }
@@ -1123,7 +1128,7 @@ body {
         .faq-answer.active {
             padding: 2rem;
             max-height: 500px;
-        }
+        } */
 
         /* Contact Enhanced */
         .contact-section {
@@ -1185,7 +1190,7 @@ body {
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero-title-index {
-                font-size: 2.5rem;
+                font-size: 2.5rem !important;
             }
             
             .hero-stats {
@@ -1199,7 +1204,7 @@ body {
 
         @media (max-width: 768px) {
             .hero-title-index {
-                font-size: 1rem;
+                font-size: 1.2rem !important;
             }
             
             .hero-subtitle-index {
@@ -1233,10 +1238,12 @@ body {
 
         @media (max-width: 576px) {
             .hero-section-index {
-                min-height: 80vh;
-                padding: 100px 0 50px;
+                min-height: 50vh;
+                padding: 30px 0 30px;
             }
-            
+            .service-tile{
+                font-size: 1.2rem;
+            }
             .btn-cta {
                 padding: 1rem 2rem;
                 font-size: 1rem;
@@ -1584,3 +1591,188 @@ body {
             }
         }
         
+
+/* poduicts page style */
+        /* Product Cards */
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="texture" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23texture)"/></svg>');
+        }
+
+        .product-image-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: 4px solid var(--gold-accent);
+        }
+
+        .product-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--burgundy-deep);
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .product-benefits {
+            background: var(--cream);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-benefits h6 {
+            color: var(--burgundy-deep);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-benefits li {
+            padding: 3px 0;
+            color: var(--text-secondary);
+        }
+
+        .product-benefits li::before {
+            content: '✓';
+            color: var(--gold-accent);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--burgundy-deep);
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            background: linear-gradient(45deg, #128C7E, #25D366);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Guarantee-produits Section */
+        .guarantee-produits-section {
+            background: linear-gradient(135deg, var(--burgundy-deep), var(--burgundy-light));
+            color: white;
+            padding: 80px 0;
+        }
+
+        .guarantee-produits-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 100%;
+        }
+
+        .guarantee-produits-icon {
+            font-size: 3rem;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .guarantee-produits-card h5 {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+       
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .product-image {
+                height: 200px;
+                font-size: 3rem;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .products-section {
+                padding: 60px 0;
+            }
+
+            .product-content {
+                padding: 20px;
+            }
+        }
+/* poduicts page style end */
